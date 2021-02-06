@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Получение данных и отрисовка отзывов
   async function fetchFeedbacks() {
-    const response = await fetch("../feedback_data.json");
+    const response = await fetch("/feedback_data.json");
 
     if (response.ok) {
       const feedbackPlaceholder = document.querySelector(
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Получение данных и отрисовка новостей
   async function fetchNews() {
-    const response = await fetch("../blog_posts.json");
+    const response = await fetch("/blog_posts.json");
 
     if (response.ok) {
       const news = await response.json(); // прочитать тело ответа как текст
